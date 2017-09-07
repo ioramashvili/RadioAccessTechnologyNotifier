@@ -1,25 +1,23 @@
-//
-//  ViewController.swift
-//  RadioAccessTechnologyNotifier
-//
-//  Created by Shota Ioramashvili on 9/7/17.
-//  Copyright © 2017 Shota. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // initialize delegate
+        RadioAccessTechnologyNotifier.shared.delegate = self
+        
+        // get notification
+        NotificationCenter.default.addObserver(self, selector: #selector(stateDidChange),name: RadioAccessTechnologyNotifierStateDidChange, object: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func stateDidChange() {
+        print(RadioAccessTechnologyNotifier.shared.currentState)
     }
-
-
 }
 
+extension ViewController: RadioAccessTechnologyNotifierDelegate {
+    func didChange(to state: RadioAccessTechnologyNotifierState) {
+        print(state)
+    }
+}

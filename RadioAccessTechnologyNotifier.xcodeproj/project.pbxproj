@@ -12,6 +12,9 @@
 		43F348F71F616B0F0052376D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F348F51F616B0F0052376D /* Main.storyboard */; };
 		43F348F91F616B0F0052376D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F348F81F616B0F0052376D /* Assets.xcassets */; };
 		43F348FC1F616B0F0052376D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F348FA1F616B0F0052376D /* LaunchScreen.storyboard */; };
+		43F349051F616B2F0052376D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F349041F616B2F0052376D /* CoreTelephony.framework */; };
+		43F349071F616B400052376D /* RadioAccessTechnologyNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F349061F616B400052376D /* RadioAccessTechnologyNotifier.swift */; };
+		43F349091F616B700052376D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F349081F616B700052376D /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		43F348F81F616B0F0052376D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43F348FB1F616B0F0052376D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43F348FD1F616B0F0052376D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43F349041F616B2F0052376D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		43F349061F616B400052376D /* RadioAccessTechnologyNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioAccessTechnologyNotifier.swift; sourceTree = "<group>"; };
+		43F349081F616B700052376D /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F349051F616B2F0052376D /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,7 @@
 			children = (
 				43F348F01F616B0F0052376D /* RadioAccessTechnologyNotifier */,
 				43F348EF1F616B0F0052376D /* Products */,
+				43F349031F616B2F0052376D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +68,18 @@
 				43F348F81F616B0F0052376D /* Assets.xcassets */,
 				43F348FA1F616B0F0052376D /* LaunchScreen.storyboard */,
 				43F348FD1F616B0F0052376D /* Info.plist */,
+				43F349081F616B700052376D /* Reachability.swift */,
+				43F349061F616B400052376D /* RadioAccessTechnologyNotifier.swift */,
 			);
 			path = RadioAccessTechnologyNotifier;
+			sourceTree = "<group>";
+		};
+		43F349031F616B2F0052376D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43F349041F616B2F0052376D /* CoreTelephony.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +157,8 @@
 			files = (
 				43F348F41F616B0F0052376D /* ViewController.swift in Sources */,
 				43F348F21F616B0F0052376D /* AppDelegate.swift in Sources */,
+				43F349091F616B700052376D /* Reachability.swift in Sources */,
+				43F349071F616B400052376D /* RadioAccessTechnologyNotifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +283,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P56L8EXYGW;
 				INFOPLIST_FILE = RadioAccessTechnologyNotifier/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.utilites.RadioAccessTechnologyNotifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +297,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P56L8EXYGW;
 				INFOPLIST_FILE = RadioAccessTechnologyNotifier/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.utilites.RadioAccessTechnologyNotifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
