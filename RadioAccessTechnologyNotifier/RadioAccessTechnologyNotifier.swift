@@ -13,8 +13,16 @@ public class RadioAccessTechnologyNotifier {
     
     fileprivate init() {
         defer {
-            NotificationCenter.default.addObserver(self, selector: #selector(radioAccessTechnologyDidChange), name:.CTRadioAccessTechnologyDidChange, object: nil)
-            NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged),name: ReachabilityChangedNotification, object: nil)
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(radioAccessTechnologyDidChange),
+                name:.CTRadioAccessTechnologyDidChange,
+                object: nil)
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(reachabilityChanged),
+                name: ReachabilityChangedNotification,
+                object: nil)
         }
         
         reachability = Reachability()
@@ -84,10 +92,10 @@ public class RadioAccessTechnologyNotifier {
 
 public enum RadioAccessTechnologyNotifierState: String {
     case wifi = "WiFi"
-    case lte = "4G"
+    case lte = "LTE"
     case _3G = "3G"
-    case edge = "2G"
-    case unknown = "unknown"
+    case edge = "Edge"
+    case unknown = "Unknown"
 }
 
 public protocol RadioAccessTechnologyNotifierDelegate: class {
