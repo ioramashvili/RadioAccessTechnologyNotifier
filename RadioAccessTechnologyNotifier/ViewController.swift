@@ -4,14 +4,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // initialize delegate
+        // set delegate
         RadioAccessTechnologyNotifier.shared.delegate = self
         
         // get notification
-        NotificationCenter.default.addObserver(self, selector: #selector(stateDidChange),name: RadioAccessTechnologyNotifierStateDidChange, object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(radioAccessTechnologyNotifierStateDidChange),
+            name: RadioAccessTechnologyNotifierStateDidChange,
+            object: nil)
     }
     
-    func stateDidChange() {
+    func radioAccessTechnologyNotifierStateDidChange() {
         print(RadioAccessTechnologyNotifier.shared.currentState)
     }
 }
